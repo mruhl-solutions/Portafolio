@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Mail } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { GithubIcon, LinkedinIcon } from "@/components/icons";
+import { LinkedinIcon, InstagramIcon } from "@/components/icons";
 import { profile } from "@/data/profile";
 
 export function Hero() {
@@ -14,14 +14,14 @@ export function Hero() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(99,102,241,0.15),transparent_50%),radial-gradient(circle_at_80%_0%,rgba(56,189,248,0.12),transparent_45%)]"
+        className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_20%,rgba(220,38,38,0.16),transparent_50%),radial-gradient(circle_at_80%_0%,rgba(113,113,122,0.14),transparent_45%)]"
       />
       <Container className="py-24">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mb-4 text-sm font-medium uppercase tracking-widest text-indigo-600 dark:text-indigo-400"
+          className="mb-4 text-sm font-medium uppercase tracking-widest text-red-600 dark:text-red-400"
         >
           {profile.location}
         </motion.p>
@@ -39,7 +39,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-3 text-2xl font-semibold text-indigo-600 sm:text-3xl dark:text-indigo-400"
+          className="mt-3 text-2xl font-semibold text-red-600 sm:text-3xl dark:text-red-400"
         >
           {profile.role}
         </motion.h2>
@@ -81,15 +81,6 @@ export function Hero() {
           className="mt-10 flex items-center gap-4"
         >
           <a
-            href={profile.socials.github}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 transition-colors hover:border-zinc-300 hover:bg-zinc-100 dark:border-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:bg-zinc-900"
-          >
-            <GithubIcon className="h-5 w-5" />
-          </a>
-          <a
             href={profile.socials.linkedin}
             target="_blank"
             rel="noreferrer"
@@ -97,6 +88,16 @@ export function Hero() {
             className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 transition-colors hover:border-zinc-300 hover:bg-zinc-100 dark:border-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:bg-zinc-900"
           >
             <LinkedinIcon className="h-5 w-5" />
+          </a>
+          <a
+            href={profile.socials.instagramDev}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram de desarrollador"
+            title="@mruhl.code"
+            className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 transition-colors hover:border-zinc-300 hover:bg-zinc-100 dark:border-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:bg-zinc-900"
+          >
+            <InstagramIcon className="h-5 w-5" />
           </a>
           <a
             href={`mailto:${profile.email}`}
