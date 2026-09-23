@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ArrowDown, Mail } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { LinkedinIcon, InstagramIcon } from "@/components/icons";
+import { LinkedinIcon } from "@/components/icons";
 import { profile } from "@/data/profile";
 
 export function Hero() {
@@ -93,11 +94,17 @@ export function Hero() {
             href={profile.socials.instagramDev}
             target="_blank"
             rel="noreferrer"
-            aria-label="Instagram de desarrollador"
-            title="@mruhl.code"
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 transition-colors hover:border-zinc-300 hover:bg-zinc-100 dark:border-zinc-800 dark:text-zinc-300 dark:hover:border-zinc-700 dark:hover:bg-zinc-900"
+            aria-label="mruhl.code en Instagram"
+            className="flex h-11 items-center gap-2 rounded-full border border-zinc-200 py-1 pl-1 pr-4 text-zinc-700 transition-colors hover:border-red-200 hover:bg-zinc-100 dark:border-zinc-800 dark:text-zinc-300 dark:hover:border-red-900/60 dark:hover:bg-zinc-900"
           >
-            <InstagramIcon className="h-5 w-5" />
+            <Image
+              src="/brand/mruhl-code-medal.jpg"
+              alt="mruhl.code"
+              width={36}
+              height={36}
+              className="h-9 w-9 rounded-full object-cover"
+            />
+            <span className="text-sm font-medium">@mruhl.code</span>
           </a>
           <a
             href={`mailto:${profile.email}`}

@@ -27,7 +27,7 @@ export function SkillMarquee({ skills }: { skills: readonly string[] }) {
   const track = [...skills, ...skills];
 
   return (
-    <div className="relative mb-14 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
+    <div className="relative mb-14 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
       <div className="animate-marquee flex w-max items-center gap-3 hover:[animation-play-state:paused]">
         {track.map((skill, i) => {
           const meta = SKILL_META[skill];

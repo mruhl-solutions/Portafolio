@@ -5,8 +5,8 @@ export const profile = {
   tagline:
     "Construyo aplicaciones web eficientes y escalables, diseñando interfaces simples e intuitivas que garantizan una excelente experiencia de usuario",
   summary:
-    "Desarrollador de Software con 5 años de experiencia construyendo soluciones tecnológicas para el sector seguros, donde combino profundidad técnica con visión de negocio para resolver problemas reales de la industria. Mi especialización está en el ecosistema .NET (C#, ASP.NET, Entity Framework) y SQL Server, donde diseño, desarrollo y optimizo sistemas: integración de servicios, mantenimiento, migración y mejora continua del rendimiento. En paralelo, amplié mi perfil hacia tecnologías frontend y mobile — Angular y React — y hacia Firebase para la gestión de aplicaciones móviles. Fuera del trabajo soy un apasionado del deporte, una pasión que me impulsó a empezar a desarrollar por mi cuenta aplicaciones a medida para el ámbito deportivo — como las que podés ver en la sección de proyectos.",
-  email: "matiaskapo45@gmail.com",
+    "Desarrollador de Software con 5 años de experiencia en el sector seguros, especializado en el ecosistema .NET (C#, ASP.NET MVC, Entity Framework) y SQL Server. Diseño, desarrollo y mantengo sistemas críticos de negocio, con foco en migraciones de versión, integración de APIs y optimización de rendimiento. En paralelo, amplié mi perfil hacia el frontend y mobile — Angular, React y Firebase — para desarrollar proyectos de punta a punta. Fuera del trabajo soy un apasionado del deporte, lo que me impulsó a desarrollar por mi cuenta aplicaciones a medida para ese ámbito, como las que podés ver en la sección de proyectos.",
+  email: "mruhlcode@gmail.com",
   phone: "011 6043-3616",
   socials: {
     linkedin: "https://www.linkedin.com/in/matias-agustin-ruhl/",
@@ -75,10 +75,11 @@ export const experience = [
     period: "Enero 2022 — Presente",
     location: "Provincia de Buenos Aires, Argentina",
     achievements: [
-      "Diseño, desarrollo y optimización de sistemas para el sector seguros sobre el ecosistema .NET (C#, ASP.NET, Entity Framework) y SQL Server.",
-      "Integración de servicios y mantenimiento de aplicaciones críticas para el negocio.",
-      "Migración y mejora continua del rendimiento de sistemas existentes.",
-      "Ampliación del stack hacia Angular, React y Firebase para el desarrollo de nuevas soluciones frontend y mobile.",
+      "Desarrollo y mantenimiento de sistemas ASP.NET MVC sobre múltiples versiones del framework (.NET 3.5, 4.5 y .NET 7, 8 y 9) para el sector seguros, incluyendo migraciones entre versiones de .NET.",
+      "Diseño y desarrollo de APIs REST para consultas externas e integración con sistemas de terceros.",
+      "Trabajo con SQL Server: stored procedures, optimización de consultas y acceso a datos con LINQ y Entity Framework.",
+      "Desarrollos nuevos en Angular y React, además del mantenimiento evolutivo de aplicaciones existentes.",
+      "Integración e implementación de procesos propios de compañías aseguradoras dentro del sistema, adaptando la lógica de negocio a los requerimientos de cada una.",
     ],
   },
 ] as const;

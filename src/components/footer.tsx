@@ -1,6 +1,7 @@
 import { Mail } from "lucide-react";
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
-import { LinkedinIcon, InstagramIcon } from "@/components/icons";
+import { LinkedinIcon } from "@/components/icons";
 import { profile } from "@/data/profile";
 
 export function Footer() {
@@ -24,11 +25,17 @@ export function Footer() {
             href={profile.socials.instagramDev}
             target="_blank"
             rel="noreferrer"
-            aria-label="Instagram de desarrollador"
+            aria-label="mruhl.code en Instagram"
             title="@mruhl.code"
-            className="hover:text-zinc-900 dark:hover:text-zinc-100"
+            className="opacity-80 grayscale transition-all hover:opacity-100 hover:grayscale-0"
           >
-            <InstagramIcon className="h-4 w-4" />
+            <Image
+              src="/brand/mruhl-code-medal.jpg"
+              alt="mruhl.code"
+              width={20}
+              height={20}
+              className="h-5 w-5 rounded-full object-cover"
+            />
           </a>
           <a
             href={`mailto:${profile.email}`}
