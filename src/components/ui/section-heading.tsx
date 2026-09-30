@@ -19,7 +19,8 @@ export function SectionHeading({
       transition={{ duration: 0.5 }}
       className="mb-12 max-w-2xl"
     >
-      <span className="text-sm font-medium uppercase tracking-widest text-red-600 dark:text-red-400">
+      <span className="inline-flex items-center gap-2 text-sm font-medium uppercase tracking-widest text-red-600 dark:text-red-400">
+        <span aria-hidden className="h-px w-4 bg-red-600 dark:bg-red-400" />
         {eyebrow}
       </span>
       <h2 className="mt-3 text-3xl font-semibold tracking-tight text-zinc-900 sm:text-4xl dark:text-zinc-50">

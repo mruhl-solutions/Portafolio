@@ -27,23 +27,40 @@ export function Hero() {
           {profile.location}
         </motion.p>
 
-        <motion.h1
+        <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.05 }}
-          className="text-4xl font-bold tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50"
+          className="flex items-center gap-5"
         >
-          {profile.name}
-        </motion.h1>
+          <div className="relative shrink-0">
+            <div
+              aria-hidden
+              className="absolute inset-0 -z-10 rounded-full bg-red-500/30 blur-xl"
+            />
+            <div className="rounded-full bg-linear-to-br from-red-600 via-zinc-400 to-zinc-700 p-0.5">
+              <div className="rounded-full bg-white p-1 dark:bg-zinc-950">
+                <Image
+                  src="/projects/mati.jpeg"
+                  alt={profile.name}
+                  width={96}
+                  height={96}
+                  priority
+                  className="h-16 w-16 rounded-full object-cover sm:h-24 sm:w-24"
+                />
+              </div>
+            </div>
+          </div>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-3 text-2xl font-semibold text-red-600 sm:text-3xl dark:text-red-400"
-        >
-          {profile.role}
-        </motion.h2>
+          <div>
+            <h1 className="text-3xl font-bold tracking-tight text-zinc-900 sm:text-6xl dark:text-zinc-50">
+              {profile.name}
+            </h1>
+            <h2 className="mt-1 text-xl font-semibold text-red-600 sm:mt-3 sm:text-3xl dark:text-red-400">
+              {profile.role}
+            </h2>
+          </div>
+        </motion.div>
 
         <motion.p
           initial={{ opacity: 0, y: 16 }}
@@ -60,13 +77,19 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-10 flex flex-wrap items-center gap-4"
         >
-          <a
-            href="#proyectos"
-            className="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition-transform hover:scale-[1.03] dark:bg-white dark:text-zinc-900"
-          >
-            Ver Proyectos
-            <ArrowDown className="h-4 w-4" />
-          </a>
+          <div className="relative">
+            <div
+              aria-hidden
+              className="absolute inset-0 -z-10 rounded-full bg-red-600/25 blur-lg"
+            />
+            <a
+              href="#proyectos"
+              className="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-6 py-3 text-sm font-semibold text-white shadow-[0_0_0_0_rgba(220,38,38,0)] transition-all hover:scale-[1.03] hover:shadow-[0_8px_30px_-6px_rgba(220,38,38,0.45)] dark:bg-white dark:text-zinc-900"
+            >
+              Ver Proyectos
+              <ArrowDown className="h-4 w-4" />
+            </a>
+          </div>
           <a
             href="#contacto"
             className="inline-flex items-center gap-2 rounded-full border border-zinc-300 px-6 py-3 text-sm font-semibold text-zinc-800 transition-colors hover:border-zinc-400 hover:bg-zinc-100 dark:border-zinc-700 dark:text-zinc-200 dark:hover:border-zinc-600 dark:hover:bg-zinc-900"

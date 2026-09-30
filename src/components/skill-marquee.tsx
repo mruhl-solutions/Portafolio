@@ -1,5 +1,12 @@
 import type { ComponentType, SVGProps } from "react";
-import { Database, Server as ServerIcon, Smartphone } from "lucide-react";
+import {
+  Cloud,
+  Database,
+  Layers,
+  Server as ServerIcon,
+  Smartphone,
+  Workflow,
+} from "lucide-react";
 import {
   SiAngular,
   SiDotnet,
@@ -7,6 +14,8 @@ import {
   SiFirebase,
   SiNextdotjs,
   SiReact,
+  SiSupabase,
+  SiTypescript,
 } from "react-icons/si";
 
 type IconType = ComponentType<SVGProps<SVGSVGElement>>;
@@ -20,6 +29,11 @@ const SKILL_META: Record<string, { icon: IconType; color: string }> = {
   "Entity Framework": { icon: Database, color: "#a855f7" },
   "SQL Server": { icon: ServerIcon, color: "#CC2927" },
   Firebase: { icon: SiFirebase, color: "#FFCA28" },
+  Supabase: { icon: SiSupabase, color: "#3ECF8E" },
+  TypeScript: { icon: SiTypescript, color: "#3178C6" },
+  "Azure DevOps": { icon: Cloud, color: "#0078D4" },
+  "Clean Architecture": { icon: Layers, color: "#14b8a6" },
+  CQRS: { icon: Workflow, color: "#f59e0b" },
   "Desarrollo Mobile": { icon: Smartphone, color: "#dc2626" },
 };
 

@@ -30,15 +30,28 @@ export function Projects() {
               transition={{ duration: 0.4, delay: index * 0.05 }}
               className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white/80 shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:border-red-200 hover:shadow-lg dark:border-zinc-800 dark:bg-zinc-900/70 dark:hover:border-red-900/60"
             >
+              <div
+                aria-hidden
+                className="h-1 w-full bg-linear-to-r from-red-600 via-red-500 to-transparent"
+              />
               <ProjectGallery
                 project={project}
+                priority={index === 0}
                 onOpen={(i) => setLightbox({ project, index: i })}
               />
 
               <div className="flex flex-1 flex-col p-6">
-                <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-                  {project.title}
-                </h3>
+                <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+                  <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+                    {project.title}
+                  </h3>
+                  <span className="text-xs font-medium text-zinc-500 dark:text-zinc-500">
+                    {project.period}
+                  </span>
+                </div>
+                <p className="text-xs font-medium text-red-600 dark:text-red-400">
+                  {project.role}
+                </p>
                 <p className="mt-2 flex-1 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
                   {project.description}
                 </p>
@@ -75,9 +88,11 @@ export function Projects() {
 
 function ProjectGallery({
   project,
+  priority = false,
   onOpen,
 }: {
   project: Project;
+  priority?: boolean;
   onOpen: (index: number) => void;
 }) {
   const [active, setActive] = useState(0);
@@ -92,13 +107,14 @@ function ProjectGallery({
       <button
         type="button"
         onClick={() => onOpen(active)}
-        className="block h-full w-full cursor-zoom-in"
+        className="relative block h-full w-full cursor-zoom-in"
         aria-label={`Ver imagen de ${project.title}`}
       >
         <Image
           src={project.images[active]}
           alt={`${project.title} — captura ${active + 1}`}
           fill
+          priority={priority && active === 0}
           sizes="(min-width: 1024px) 50vw, 100vw"
           className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
         />
@@ -138,9 +154,8 @@ function ProjectGallery({
                   e.stopPropagation();
                   goTo(i);
                 }}
-                className={`h-1.5 rounded-full transition-all ${
-                  i === active ? "w-4 bg-white" : "w-1.5 bg-white/60"
-                }`}
+                className={`h-1.5 rounded-full transition-all ${i === active ? "w-4 bg-white" : "w-1.5 bg-white/60"
+                  }`}
                 aria-label={`Ir a imagen ${i + 1}`}
               />
             ))}
