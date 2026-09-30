@@ -46,12 +46,12 @@ export function Contact() {
   }
 
   return (
-    <section id="contacto" className="bg-zinc-50 py-24 dark:bg-zinc-900/30">
+    <section id="contacto" className="border-y border-zinc-200/70 bg-zinc-50/60 py-24 backdrop-blur-sm dark:border-zinc-800/70 dark:bg-zinc-900/30">
       <Container>
         <SectionHeading
           eyebrow="Contacto"
           title="Hablemos"
-          description="¿Tenés una propuesta, un proyecto o simplemente querés saludar? Escribime y te respondo a la brevedad."
+          description="¿Tenés un proyecto en mente? Contame de qué se trata y me pongo en contacto."
         />
 
         <div className="grid gap-10 lg:grid-cols-5">
@@ -61,19 +61,19 @@ export function Contact() {
                 href={`mailto:${profile.email}`}
                 className="flex items-center gap-3 text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
               >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-400">
                   <Mail className="h-4 w-4" />
                 </span>
                 {profile.email}
               </a>
               <p className="flex items-center gap-3 text-sm text-zinc-600 dark:text-zinc-400">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-400">
                   <Phone className="h-4 w-4" />
                 </span>
                 {profile.phone}
               </p>
               <p className="flex items-center gap-3 text-sm text-zinc-600 dark:text-zinc-400">
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-50 text-indigo-600 dark:bg-indigo-500/10 dark:text-indigo-400">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-red-50 text-red-600 dark:bg-red-500/10 dark:text-red-400">
                   <MapPin className="h-4 w-4" />
                 </span>
                 {profile.location}
@@ -87,7 +87,7 @@ export function Contact() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.4 }}
             onSubmit={handleSubmit}
-            className="space-y-4 rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm lg:col-span-3 dark:border-zinc-800 dark:bg-zinc-900"
+            className="space-y-4 rounded-2xl border border-zinc-200 bg-white/80 p-6 shadow-sm backdrop-blur-sm lg:col-span-3 dark:border-zinc-800 dark:bg-zinc-900/70"
           >
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
@@ -102,7 +102,7 @@ export function Contact() {
                   name="name"
                   type="text"
                   required
-                  className="w-full rounded-lg border border-zinc-200 bg-white px-4 py-2.5 text-sm text-zinc-900 outline-none transition-colors focus:border-indigo-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50"
+                  className="w-full rounded-lg border border-zinc-200 bg-white px-4 py-2.5 text-sm text-zinc-900 outline-none transition-colors focus:border-red-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50"
                   placeholder="Tu nombre"
                 />
               </div>
@@ -118,7 +118,7 @@ export function Contact() {
                   name="email"
                   type="email"
                   required
-                  className="w-full rounded-lg border border-zinc-200 bg-white px-4 py-2.5 text-sm text-zinc-900 outline-none transition-colors focus:border-indigo-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50"
+                  className="w-full rounded-lg border border-zinc-200 bg-white px-4 py-2.5 text-sm text-zinc-900 outline-none transition-colors focus:border-red-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50"
                   placeholder="tu@email.com"
                 />
               </div>
@@ -136,7 +136,7 @@ export function Contact() {
                 name="subject"
                 type="text"
                 required
-                className="w-full rounded-lg border border-zinc-200 bg-white px-4 py-2.5 text-sm text-zinc-900 outline-none transition-colors focus:border-indigo-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50"
+                className="w-full rounded-lg border border-zinc-200 bg-white px-4 py-2.5 text-sm text-zinc-900 outline-none transition-colors focus:border-red-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50"
                 placeholder="¿En qué te puedo ayudar?"
               />
             </div>
@@ -153,7 +153,7 @@ export function Contact() {
                 name="message"
                 required
                 rows={5}
-                className="w-full resize-none rounded-lg border border-zinc-200 bg-white px-4 py-2.5 text-sm text-zinc-900 outline-none transition-colors focus:border-indigo-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50"
+                className="w-full resize-none rounded-lg border border-zinc-200 bg-white px-4 py-2.5 text-sm text-zinc-900 outline-none transition-colors focus:border-red-500 dark:border-zinc-700 dark:bg-zinc-950 dark:text-zinc-50"
                 placeholder="Contame más sobre tu idea o proyecto..."
               />
             </div>

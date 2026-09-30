@@ -27,7 +27,7 @@ export function Navbar() {
     <header
       className={`sticky top-0 z-50 transition-colors ${
         scrolled
-          ? "border-b border-zinc-200 bg-white/80 backdrop-blur dark:border-zinc-800 dark:bg-zinc-950/80"
+          ? "border-b border-zinc-200/80 bg-white/70 backdrop-blur-md dark:border-zinc-800/80 dark:bg-zinc-950/70"
           : "border-b border-transparent bg-transparent"
       }`}
     >
@@ -44,9 +44,10 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50"
+              className="group relative text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50"
             >
               {link.label}
+              <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-red-600 transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
@@ -65,7 +66,7 @@ export function Navbar() {
       </Container>
 
       {open ? (
-        <nav className="border-t border-zinc-200 bg-white px-6 py-4 md:hidden dark:border-zinc-800 dark:bg-zinc-950">
+        <nav className="border-t border-zinc-200/80 bg-white/90 px-6 py-4 backdrop-blur-md md:hidden dark:border-zinc-800/80 dark:bg-zinc-950/90">
           <div className="flex flex-col gap-4">
             {links.map((link) => (
               <a

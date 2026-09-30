@@ -1,6 +1,7 @@
 import { Mail } from "lucide-react";
+import Image from "next/image";
 import { Container } from "@/components/ui/container";
-import { GithubIcon, LinkedinIcon } from "@/components/icons";
+import { LinkedinIcon } from "@/components/icons";
 import { profile } from "@/data/profile";
 
 export function Footer() {
@@ -12,15 +13,6 @@ export function Footer() {
         </p>
         <div className="flex items-center gap-4">
           <a
-            href={profile.socials.github}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-            className="hover:text-zinc-900 dark:hover:text-zinc-100"
-          >
-            <GithubIcon className="h-4 w-4" />
-          </a>
-          <a
             href={profile.socials.linkedin}
             target="_blank"
             rel="noreferrer"
@@ -28,6 +20,22 @@ export function Footer() {
             className="hover:text-zinc-900 dark:hover:text-zinc-100"
           >
             <LinkedinIcon className="h-4 w-4" />
+          </a>
+          <a
+            href={profile.socials.instagramDev}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="mruhl.code en Instagram"
+            title="@mruhl.code"
+            className="opacity-80 grayscale transition-all hover:opacity-100 hover:grayscale-0"
+          >
+            <Image
+              src="/brand/mruhl-code-medal.jpg"
+              alt="mruhl.code"
+              width={20}
+              height={20}
+              className="h-5 w-5 rounded-full object-cover"
+            />
           </a>
           <a
             href={`mailto:${profile.email}`}
